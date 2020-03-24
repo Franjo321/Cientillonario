@@ -7,14 +7,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { PuntosComponent } from './puntos/puntos.component';
 import { PuntosService } from './puntos/puntos.service';
+import { PreguntasComponent } from './preguntas/preguntas.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { Credenciales } from './credenciales';
+import { PreguntasService } from './preguntas/preguntas.service';
+import { Preguntas } from './preguntas/preguntas';
 
 const routes: Routes = [
-  {path: '', component: PuntosComponent},
+  {path: '', component: InicioComponent},
+  {path: 'inicio', component: InicioComponent},
+  {path: 'pregunta/:id', component: PreguntasComponent},
 ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PreguntasComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +31,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [PuntosService],
+  providers: [PreguntasService, Credenciales, Preguntas],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
