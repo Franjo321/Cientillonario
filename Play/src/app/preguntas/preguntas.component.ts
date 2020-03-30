@@ -4,6 +4,9 @@ import { Credenciales } from '../credenciales';
 import { PreguntasService } from './preguntas.service';
 import { Preguntas } from './preguntas';
 import { ActivatedRoute } from '@angular/router';
+import { PuntosService } from '../puntos/puntos.service';
+import Swal from 'sweetalert2';
+import { Puntos } from './puntos';
 
 @Component({
   selector: 'app-preguntas',
@@ -16,6 +19,8 @@ export class PreguntasComponent implements OnInit {
   idSiguiente: number;
   pregunta :Pregunta = new Pregunta();
   preguntas :Pregunta[];
+  puntosTotales: any;
+  puntos: Puntos = new Puntos();
 
   constructor(private preguntasService: PreguntasService, private activatedRoute: ActivatedRoute) { }
 
@@ -44,4 +49,23 @@ export class PreguntasComponent implements OnInit {
   sumarId():void{
     this.id++;
   }
+
+  esUltimaPregunta(): boolean{
+    if(this.id == this.preguntas.length){
+      return true;
+    } else{
+      return false;
+    }
+  }
+
+  mandarPuntuacion(): void{
+      this.preguntasService.enviarPuntos(this.puntos).subscribe(response => {
+        Swal.fire(
+            '¡Puntuación enviada!',
+            `Has obtenido puntos`,
+            'success'
+        )
+      })
+  }
+
 }

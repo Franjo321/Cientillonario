@@ -5,6 +5,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import Swal from 'sweetalert2';
 import { Pregunta } from './pregunta';
+import { Puntos } from './puntos';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,17 @@ export class PreguntasService {
          return throwError(e);
        })
      );
+   }
+
+   enviarPuntos(puntos: Puntos): Observable<any>{
+     puntos.invitation = this.invitation;
+     puntos.validation = this.validation;
+     return this.http.post<any>(this.urlEndPoint+'send_points', puntos, {headers: this.httpHeaders}).pipe(
+       catchError(e => {
+         Swal.fire('Error al enviar la puntuación', e.error.mensaje, 'error');
+         return throwError(e);
+       })
+     )
    }
 
 }

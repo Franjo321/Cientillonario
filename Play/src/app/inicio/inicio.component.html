@@ -1,21 +1,18 @@
-
-    <div class="contenedorPrincipal">
-
-        <header>
-            <img src="assets/logo.png" class="imgcenter">
-        </header>
-
-        <p class="letraInicio">¿Quién quiere ser Cientillonario?</p>
-
-        <p class="cuadroTexto text-center text-primary"><input size="35" [(ngModel)]="usuario" class="text-center text-primary" type="text" name="nombredelacaja" id="idplaceholder"
-                placeholder="Introduzca el nombre de usuario"></p>
-
-        <p><button class="button mt-4" (click)="guardarUsuario()" [routerLink]="['/pregunta/1']">Jugar</button></p>
-        <p><button class="button">Tutorial</button></p>
-
-
-        <footer>
-            <img src="assets/centic.png" class="logocentic mt-3">
-        </footer>
-
+<div class="">
+    <div class="text-center">
+        <img src="assets/logo.png" class="">
     </div>
+
+    <p class="text-center h4">¿Quién quiere ser Cientillonario?</p>
+
+    <p class="text-center mt-4"><input size="35" [(ngModel)]="usuario" class="form-control text-center text-color-main" type="text" name="usuario" id="usuario"
+            placeholder="Introduzca el nombre de usuario"></p>
+
+    <p class="text-center"><button class="btn button text-white mt-2 w-100" (click)="guardarUsuario()" [disabled]="!usuario" [routerLink]="['/pregunta/1']">Jugar</button></p>
+    <p class="text-center"><button class="text-white button-tutorial btn">Tutorial</button></p>
+
+    <div class="footer">
+        <img src="assets/centic.png" class="logocentic w-50">
+    </div>
+
+</div>

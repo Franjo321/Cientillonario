@@ -3,10 +3,8 @@
 }
 
 .contador{
-  height: 60px;
-  width: 60px;
-  margin-right: 10px;
-  margin-top: 10px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   text-align: center;
   justify-content: center;
@@ -15,9 +13,10 @@
 }
 
 .cientifico{
-  height: 300px;
-  width: 200px;
-  margin-bottom: -120px;
+  height: 250px;
+  width: 175px;
+  margin-bottom: 0px;
+  margin-top: -120px;
 }
 
 .comodines{
@@ -26,465 +25,77 @@
   margin-right: 10px;
 }
 
+.pregunta{
+  height: 60px;
+  overflow: scroll;
+  font-size: 12px;
+}
+
 .respuesta{
+  font-size: 14px;
   white-space: normal;
 }
 
+.footer{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
 
+.text-color-main{
+  color: var(--main-color);
+}
+
+.bg-color-main{
+  background-color: var(--main-color);
+}
 
 body {
-padding: 0;
-align-content: center;
-font: .8em Verdana, sans-serif;
-margin: 0;
+  --main-color: #084f86;
+  color: var(--main-color);
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and
-(-webkit-device-pixel-ratio: 3){
-.contenedorImagen1{
-width: 96%;
-box-sizing: border-box;
-margin-left: auto;
-margin-right:auto;
-justify-content:center;
-position:relative;
-
-
-}
-.contenedorImagenes{
-width: 100%;
-max-width: 960px;
-margin: 0 auto;
-align-content: center;
-align-items: center;
-position:relative;
+.button, .button-tutorial{
+  background-color: var(--main-color);
 }
 
-.contenedorPrincipal{
-width:100%;
-position:relative;
-}
-#sidebar{
-display:none;
-}
-
-#menu{
-text-align:center;
-}
-}
-
-@media screen and (max-device-width : 480px) and (orientation : portrait){
-
-.contenedorImagen1{
-width: 96%;
-box-sizing: border-box;
-margin-left: auto;
-margin-right:auto;
-justify-content:center;
-position:relative;
-
-
-}
-.contenedorImagenes{
-width: 100%;
-max-width: 960px;
-margin: 0 auto;
-align-content: center;
-align-items: center;
-position:relative;
-}
-
-.contenedorPrincipal{
-width:100%;
-position:relative;
-}
-#sidebar{
-display:none;
-}
-
-#menu{
-text-align:center;
-}
-}
-@media screen and (max-device-width : 480px) and (orientation : landscape){
-
-.contenedorImagenes{
-width: 100%;
-max-width: 960px;
-margin: 0 auto;
-align-content: center;
-align-items: center;
-position:relative;
-}
-.contenedorImagen1{
-width: 96%;
-box-sizing: border-box;
-margin-left: auto;
-margin-right:auto;
-justify-content:center;
-position:relative;
-
-}
-
-.contenedorPrincipal{
-width:100%;
-position:relative;
-}
-#sidebar{
-display:none;
-}
-
-#menu{
-text-align:center;
-}
-
-
-
-}
-
-@media screen and(max-width:800px){
-.contenedorPrincipal{
-width:100%;
-position:relative;
-}
-
-.contenedorImagenes{
-width: 100%;
-max-width: 960px;
-margin: 0 auto;
-align-content: center;
-align-items: center;
-position:relative;
-}
-.contenedorImagen1{
-width: 96%;
-box-sizing: border-box;
-margin-left: auto;
-margin-right:auto;
-justify-content:center;
-position:relative;
-
-}
-}
-
-@media screen and (max-width:320px){
-.contenedorPrincipal{
-width:100%;
-position:relative;
-}
-
-.contenedorImagenes{
-width: 100%;
-max-width: 960px;
-margin: 0 auto;
-align-content: center;
-align-items: center;
-position:relative;
-}
-.contenedorImagen1{
-width: 96%;
-box-sizing: border-box;
-margin-left: auto;
-margin-right:auto;
-justify-content:center;
-position:relative;
-
-}
-}
-
-@media screen and (min-width:320px) {
-.contenedorPrincipal{
-width:100%;
-position:relative;
-}
-
-.contenedorImagenes{
-width: 100%;
-max-width: 960px;
-margin: 0 auto;
-align-content: center;
-align-items: center;
-position:relative;
-}
-.contenedorImagen1{
-width: 96%;
-box-sizing: border-box;
-margin-left: auto;
-margin-right:auto;
-justify-content:center;
-position:relative;
-
-}
-}
-
-@media screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape){
-.entry, .entry-content
-{
-font-size:1.2em;
-line-height:1.5em;
-
-}
-.contenedorPrincipal{
-width:100%;
-position:relative;
-}
-
-.contenedorImagenes{
-width: 100%;
-max-width: 960px;
-margin: 0 auto;
-align-content: center;
-align-items: center;
-position:relative;
-}
-.contenedorImagen1{
-width: 96%;
-box-sizing: border-box;
-margin-left: auto;
-margin-right:auto;
-justify-content:center;
-position:relative;
-
-}
-}
-
-@media screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
-.entry, .entry-content
-{
-font-size:1.2em;
-line-height:1.5em;
-
-}
-.contenedorPrincipal{
-width:100%;
-position:relative;
-}
-
-.contenedorImagenes{
-width: 100%;
-max-width: 960px;
-margin: 0 auto;
-align-content: center;
-align-items: center;
-position:relative;
-}
-.contenedorImagen1{
-width: 96%;
-box-sizing: border-box;
-margin-left: auto;
-margin-right:auto;
-justify-content:center;
-position:relative;
-
-}
-}
-
-.contenedorPrincipal{
-width: 100%;
-margin: 0 auto;
-overflow: hidden;
-box-sizing: border-box;
-position:relative;
-}
-
-.contenedorImagenes{
-width: 96%;
-max-width: 960px;
-margin: 0 auto;
-position:relative;
-}
-
-.contenedorImagen1{
-width: 96%;
-box-sizing: border-box;
-margin-left: auto;
-margin-right:auto;
-justify-content:center;
-position:relative;
-
-}
-
-/* IMAGENES */
-
-IMG.logocentic{
-display: block;
-margin-left: auto;
-margin-right: auto;
-align-items: center;
-border:none;
-width:150px;
-height:60px;
-}
-
-IMG.imagen1{
-
-margin-left: 20px;
-margin-top:-20px;
-align-items: center;
-border:none;
-width:130px;
-height:200px;
-max-width: 100%;
-
-}
-
-IMG.imagen2{
-
-margin-left: 360px;
-margin-top:-150px;
-align-items: center;
-border:none;
-width:40px;
-height:50px;
-max-width: 100%;
-}
-
-IMG.imagen3{
-
-margin-left: 347px;
-margin-top:-104px;
-align-items: center;
-border:none;
-width:63px;
-height:65px;
-max-width: 100%;
-}
-
-IMG.imagen4{
-
-margin-left: 347px;
-margin-top:10px;
-align-items: center;
-border:none;
-width:63px;
-height:65px;
-max-width: 100%;
-}
-
-
-IMG.imgcenter{
-display: block;
-margin-left: auto;
-margin-right: auto;
-border:none;
-}
-
-
-/*BOTONES */
-
-.button {
-text-decoration: none;
-padding: 3px;
-font-family: helvetica;
-font-weight: bold;
-font-size: 17px;
-color: #ffffff;
-background-color: #084f86;
-border-radius: 15px;
-text-align: center;
-border: none;
-align-items: center;
-margin: 4px 2px;
-width:150px;
-height:40px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-
-.buttonRespuesta{
-font-family: helvetica;
-font-weight: bold;
-font-size: 14px;
-border-radius: 10px;
-color: #ffffff;
-background-color: #437fad;
-align-items: left;
-text-align: left;
-width:100%;
-height:45px;
-text-decoration:none;
-padding-top:15px;
-padding-bottom:15px;
-}
-
-
-/* COSAS VARIAS */
-
-.cuadroTexto{
-text-align: center;
-margin-left: auto;
-margin-right: auto;
-size:"60";
-}
-
-#idplaceholder::placeholder {
-color: #084f86;
-text-align: center;
-padding-top: 40px;
-}
-
-.colorHeader{
-background-color: #084f86;
-margin-left: auto;
-margin-right: auto;
-width: 100%;
-height: 45px;
-color: #ffffff;
-font-family: "Gabriola", cursive, sans-serif;
-font-size: 26px;
+.button{
+  height: 100px;
 }
 
 .balloon{
-position: relative;
-height: 170px;
-width: 300px;
-text-align: center;
-margin-left: 30px;
-margin-top: -30px;
-margin-bottom: 20px;
-border-radius: 50%;
-font-size: 120%;
-box-shadow: 1px 12px 33px rgba(67, 127, 173, 0.5);
-padding-top:10%;
+  position: relative;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  font-size: 120%;
+  box-shadow: 1px 12px 33px rgba(67, 127, 173, 0.5);
+  padding-top:10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
 }
 
 .balloon:before {
-border: 25px solid white;
-content: '';
-border-left-color: transparent;
-border-bottom-color: transparent;
-border-right-color: transparent;
-position: absolute;
-bottom: -41px;
-left: 75px;
-transform: rotate(14deg);
+  border: 25px solid white;
+  content: '';
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  position: absolute;
+  bottom: -41px;
+  left: 75px;
+  transform: rotate(14deg);
 }
 
-
-
-/*TIPOS DE LETRA */
-
-.letraInicio{
-font-family: "Gabriola", cursive, sans-serif;
-text-align: center;
-color:#084f86;
-font-size: 220%;
-margin-left: auto;
-margin-right: auto;
-font-weight: bold;
+.div-pregunta{
+  height: 60%;
 }
 
-
-/* PIE DE PAGINA */
-
-.posicionFooter{
-
-margin-left: auto;
-margin-right: auto;
-align-items: center;
-border:none;
-position: fixed;
-width: 100%;
-bottom: 0;
+.div-respuestas{
+  height: 40%;
 }
